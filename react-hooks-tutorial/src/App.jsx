@@ -1,5 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import "./App.css";
+//import userInfo from "./main";
+import TestContextHook from "./TestContextHook";
 
 {
   /*
@@ -11,9 +13,11 @@ useContext: propsのバケツリレーをしないためのHooks。大元に設�
 
 function App() {
   const [count, setCount] = useState(0);
+  //const userInfo = useContext(UserInfo);
 
   const handleClick = () => {
     setCount(count + 1);
+    //console.log(userInfo);
   };
 
   useEffect(() => {
@@ -32,6 +36,7 @@ function App() {
 
       <hr />
       <h1>useContext</h1>
+      <TestContextHook />
     </div>
   );
 }
