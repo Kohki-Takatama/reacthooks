@@ -14,17 +14,14 @@ const userInfo = {
   },
 };
 
-const test = "test clear";
-
-const UserInfo = createContext(userInfo.toshi);
+const Context = createContext(userInfo);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  //<UserInfo.Provider value={userInfo.toshi}>
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-  //</UserInfo.Provider>*/
+  <Context.Provider value={userInfo}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Context.Provider>
 );
 
-//export default userInfo;
-export default test;
+export default Context;

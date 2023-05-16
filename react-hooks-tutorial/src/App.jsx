@@ -1,23 +1,23 @@
 import { useState, useEffect, useContext } from "react";
 import "./App.css";
-//import userInfo from "./main";
+import Context from "./main";
 import TestContextHook from "./TestContextHook";
 
 {
   /*
-useState: データの状態が変わったときにページ（の差分）をレンダリングする（レンダリングしないと内部的な更新に留まってしまう） 
-useEffect: 発火のタイミングを決めることができる
-useContext: propsのバケツリレーをしないためのHooks。大元に設置する
-*/
+  useState: データの状態が変わったときにページ（の差分）をレンダリングする（レンダリングしないと内部的な更新に留まってしまう） 
+  useEffect: 発火のタイミングを決めることができる
+  useContext: propsのバケツリレーをしないためのHooks。大元に設置する
+  */
 }
 
 function App() {
   const [count, setCount] = useState(0);
-  //const userInfo = useContext(UserInfo);
+  const userInfo = useContext(Context);
 
   const handleClick = () => {
     setCount(count + 1);
-    //console.log(userInfo);
+    console.log(userInfo);
   };
 
   useEffect(() => {
